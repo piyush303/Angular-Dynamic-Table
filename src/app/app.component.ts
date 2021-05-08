@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Column } from './components/table/column';
-import { Element } from './components/element';
-import { Employee } from './components/employee';
+import { Element } from './element';
+import { Employee } from './employee';
 
 @Component({
   selector: 'app-root',
