@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Dynamic-Table": {
+    "Angular-Dynamic-Table": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Dynamic-Table",
+            "outputPath": "dist/Angular-Dynamic-Table",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Dynamic-Table:build"
+            "browserTarget": "Angular-Dynamic-Table:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Dynamic-Table:build:production"
+              "browserTarget": "Angular-Dynamic-Table:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Dynamic-Table:build"
+            "browserTarget": "Angular-Dynamic-Table:build"
           }
         },
         "test": {
@@ -116,16 +119,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Dynamic-Table:serve"
+            "devServerTarget": "Angular-Dynamic-Table:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Dynamic-Table:serve:production"
+              "devServerTarget": "Angular-Dynamic-Table:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Dynamic-Table"
+  "defaultProject": "Angular-Dynamic-Table"
 }
