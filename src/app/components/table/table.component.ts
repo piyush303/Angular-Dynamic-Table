@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { Column } from './column';
 
 @Component({
@@ -11,13 +12,15 @@ export class TableComponent<T> implements OnInit {
   tableColumns: Array<Column> = [];
 
   @Input()
-  dataSource: Array<T> = [];
+  tableData: Array<T> = [];
 
   displayedColumns: Array<string> = [];
+  dataSource: MatTableDataSource<T> = new MatTableDataSource();
 
   constructor() {}
 
   ngOnInit(): void {
     this.displayedColumns = this.tableColumns.map((c) => c.columnDef);
+    this.dataSource = new MatTableDataSource(this.tableData);
   }
 }

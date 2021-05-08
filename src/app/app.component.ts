@@ -17,7 +17,7 @@ export class AppComponent {
     { columnDef: 'symbol', header: 'Symbol', cell: (element: Record<string, any>) => `${element['symbol']}` },
   ];
 
-  dataSource: Array<Element> = [
+  tableData: Array<Element> = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -36,7 +36,7 @@ export class AppComponent {
     { columnDef: 'skills', header: 'Skills', cell: (element: Record<string, any>) => `${element['skills']}` },
   ];
 
-  anotherDataSource: Array<Employee> = [
+  anotherTableData: Array<Employee> = [
     { name: 'John', role: 'Fullstack Developer', skills: 'Angular, Typescript, React' },
     { name: 'Mile', role: 'Java Developer', skills: 'Java' },
     { name: 'Peter', role: 'DevOps', skills: 'AWS, GCP' }
